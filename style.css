@@ -1,55 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.frac {
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    letter-spacing: 0.001em;
-    text-align: center;
-}
-.frac > span {
-    display: block;
-    padding: 0.1em;
-}
-.frac span.bottom {
-    border-top: thin solid black;
-}
-.frac span.symbol {
-    display: none;
-}
-
-#fractional {
-    background-color: tomato;
+#fractional_mul {
+    margin-left: 25px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid tomato;
     color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: tomato;
+}
+
+#fractional_mul:hover {
+    background-color: white;
+    color: tomato;
     cursor: pointer;
-    position: absolute;
-    left: 10px;
-    top: 35%;
-}
-
-#fractional:hover {
-    font-size: 1.025rem;
-}
-
-#denom1, #numer1, #denom2, #numer2 {
-    border: 2px solid gray;
-    border-radius: 5px;
-    height: 25px;
-}
-
-.mytextdiv{
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-}
-
-.divider{
-    flex-grow:1;
-    height: 1px;
-    background-color: black;
 }
