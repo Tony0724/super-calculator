@@ -9,9 +9,9 @@ const denom2Input = document.querySelector("#denom2");
 const numer2Input = document.querySelector("#numer2");
 const homeBtn = document.querySelector("#home");
 
-function handleFractionalMultiply(num1, num2, num3, num4) {
-    let denomValue = num1 * num3;
-    let numerValue = num2 * num4;
+function handleFractionalDivide(num1, num2, num3, num4) {
+    let denomValue = num1 * num4;
+    let numerValue = num2 * num3;
     for(let i = 1; i<=numerValue; i++) {
         if(numerValue % i === 0 && denomValue % i === 0) {
             denomValue = denomValue / i;
@@ -36,35 +36,13 @@ function handleFractionalMultiply(num1, num2, num3, num4) {
         NumberSpan.innerText = 0;
         NumberSpan.hidden = true;
     }
-    numerSpan.innerText = numerValue;
     denomSpan.innerText = denomValue;
+    numerSpan.innerText = numerValue;
 }
 
 function handleFractionalCalculator() {
-    if(denom1Input.value === '' && denom2Input.value === '') {
-        denom1Input.value = 1;
-        denom2Input.value = 1;
-        handleFractionalMultiply(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
-        denom1Input.value = '';
-        numer1Input.value = '';
-        denom2Input.value = '';
-        numer2Input.value = '';
-        fracDiv.style.display = 'none'
-    } else if(denom1Input.value === '') {
-        denom1Input.value = 1;
-        handleFractionalMultiply(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
-        denom1Input.value = '';
-        numer1Input.value = '';
-        denom2Input.value = '';
-        numer2Input.value = '';
-    } else if(denom2Input.value === '') {
-        denom2Input.value = 1;
-        handleFractionalMultiply(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
-        denom1Input.value = '';
-        numer1Input.value = '';
-        denom2Input.value = '';
-        numer2Input.value = '';
-    } else if(numer1Input.value === '' || numer2Input.value === '' || isNaN(Number(denom1Input.value)) || isNaN(Number(numer1Input.value)) || isNaN(Number(denom2Input.value)) || isNaN(Number(numer2Input.value))) {
+    fracDiv.style.display = 'inline-block';
+    if(numer1Input.value === '' || numer2Input.value === '' || isNaN(Number(denom1Input.value)) || isNaN(Number(numer1Input.value)) || isNaN(Number(denom2Input.value)) || isNaN(Number(numer2Input.value))) {
         NumberSpan.hidden = false;
         NumberSpan.innerHTML = '<b>This value is null or NaN!!!</b>';
         numerSpan.innerText = '';
@@ -74,8 +52,30 @@ function handleFractionalCalculator() {
         denom2Input.value = '';
         numer2Input.value = '';
         denom1Input.focus()
+    } else if(denom1Input.value === '' && denom2Input.value === '') {
+        denom1Input.value = 1;
+        denom2Input.value = 1;
+        handleFractionalDivide(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
+        denom1Input.value = '';
+        numer1Input.value = '';
+        denom2Input.value = '';
+        numer2Input.value = '';
+    } else if(denom1Input.value === '') {
+        denom1Input.value = 1;
+        handleFractionalDivide(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
+        denom1Input.value = '';
+        numer1Input.value = '';
+        denom2Input.value = '';
+        numer2Input.value = '';
+    } else if(denom2Input.value === '') {
+        denom2Input.value = 1;
+        handleFractionalDivide(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
+        denom1Input.value = '';
+        numer1Input.value = '';
+        denom2Input.value = '';
+        numer2Input.value = '';
     } else {
-        handleFractionalMultiply(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
+        handleFractionalDivide(denom1Input.value, numer1Input.value, denom2Input.value, numer2Input.value);
         denom1Input.value = '';
         numer1Input.value = '';
         denom2Input.value = '';

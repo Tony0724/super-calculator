@@ -50,6 +50,10 @@
     background-color: black;
 }
 
+span#divide {
+    font-size: 1.25rem;
+}
+
 #home {
     width: 150px;
     height: 50px;
