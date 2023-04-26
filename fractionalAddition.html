@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractional Addition Calculator</title>
+    <link rel="stylesheet" href="./fractionalAddition.css">
+</head>
+<body>
+    <h2>Fractional Addition Calculator</h2>
+    <button id="fractional">calculate</button>
+    <table >
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" id="numer1" placeholder="numer1">
+                </td>
+                <td></td>
+                <td>
+                    <input type="text" id="numer2" placeholder="numer2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="divider"></div>
+                </td>
+                <td>
+                    <span id="divide">+</span>
+                </td>
+                <td>
+                    <div class="divider"></div>
+                </td>
+                <td>
+                    <span style="font-weight: 700;">=</span>
+                    <span id="Number"></span>
+                    <div class="frac">
+                        <span id="numer"></span>
+                        <span class="symbol">/</span>
+                        <span class="bottom"></span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="denom1" placeholder="denom1">
+                </td>
+                <td></td>
+                <td>
+                    <input type="text" id="denom2" placeholder="denom2">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="home">go back home</button>
+    <script src="./fractionalAddition.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+.frac > span {
+    display: block;
+    padding: 0.1em;
+}
+.frac span.bottom {
+    border-top: thin solid black;
+}
+.frac span.symbol {
+    display: none;
+}
+
+#fractional {
+    background-color: tomato;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 35%;
+}
+
+#fractional:hover {
+    font-size: 1.025rem;
+}
+
+#denom1, #numer1, #denom2, #numer2 {
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.mytextdiv{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.divider{
+    flex-grow:1;
+    height: 1px;
+    background-color: black;
+}
+
+span#divide {
+    font-size: 1.25rem;
+}
+
+#home {
+    width: 150px;
+    height: 50px;
+    border: 1px solid tomato;
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 350px;
+}
+
+#home:hover {
+    font-size: 1.025rem;
+    cursor: pointer;
+}
